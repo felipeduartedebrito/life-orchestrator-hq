@@ -26,7 +26,7 @@ export default function Dashboard() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/30 dark:to-amber-800/30 text-amber-900 dark:text-amber-100">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-900/30 dark:to-stone-800/30 text-stone-900 dark:text-stone-100">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Tarefas Hoje</CardTitle>
@@ -68,7 +68,7 @@ export default function Dashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-900/20 dark:to-stone-800/20 text-stone-900 dark:text-stone-100">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-900/20 dark:to-slate-800/20 text-slate-900 dark:text-slate-100">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Metas Ativas</CardTitle>

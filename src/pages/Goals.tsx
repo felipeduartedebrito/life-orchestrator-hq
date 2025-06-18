@@ -39,13 +39,13 @@ export default function Goals() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 border-amber-200 dark:border-amber-800">
+        <Card className="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/20 border-slate-200 dark:border-slate-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-amber-700 dark:text-amber-300">Próximas do Prazo</CardTitle>
+            <CardTitle className="text-slate-700 dark:text-slate-300">Próximas do Prazo</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-amber-900 dark:text-amber-100">2</p>
-            <p className="text-xs text-amber-600 dark:text-amber-400">vencendo em 30 dias</p>
+            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">2</p>
+            <p className="text-xs text-slate-600 dark:text-slate-400">vencendo em 30 dias</p>
           </CardContent>
         </Card>
       </div>
@@ -102,7 +102,7 @@ export default function Goals() {
                 </div>
                 <span className={`px-2 py-1 rounded-full text-xs ${
                   goal.priority === 'Alta' ? 'bg-rose-100 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300' :
-                  'bg-amber-100 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300'
+                  'bg-slate-100 text-slate-700 dark:bg-slate-900/20 dark:text-slate-300'
                 }`}>
                   {goal.priority}
                 </span>

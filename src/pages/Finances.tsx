@@ -110,11 +110,11 @@ export default function Finances() {
           <CardContent>
             <div className="space-y-4">
               {[
-                { category: "Alimentação", amount: 650, percentage: 36, color: "bg-amber-400" },
+                { category: "Alimentação", amount: 650, percentage: 36, color: "bg-stone-400" },
                 { category: "Transporte", amount: 380, percentage: 21, color: "bg-emerald-400" },
-                { category: "Contas", amount: 290, percentage: 16, color: "bg-stone-400" },
+                { category: "Contas", amount: 290, percentage: 16, color: "bg-slate-400" },
                 { category: "Lazer", amount: 220, percentage: 12, color: "bg-rose-400" },
-                { category: "Outros", amount: 260, percentage: 15, color: "bg-slate-400" },
+                { category: "Outros", amount: 260, percentage: 15, color: "bg-gray-400" },
               ].map((item, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between text-sm">
