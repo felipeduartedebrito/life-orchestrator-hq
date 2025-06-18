@@ -18,39 +18,39 @@ export default function Tasks() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-200 dark:border-blue-800">
+        <Card className="border-slate-200 dark:border-slate-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-blue-700 dark:text-blue-300">Pendentes</CardTitle>
+            <CardTitle className="text-slate-700 dark:text-slate-300">Pendentes</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">8</p>
+            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">8</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border-green-200 dark:border-green-800">
+        <Card className="border-slate-200 dark:border-slate-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-green-700 dark:text-green-300">Concluídas</CardTitle>
+            <CardTitle className="text-slate-700 dark:text-slate-300">Concluídas</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-green-900 dark:text-green-100">12</p>
+            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">12</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 border-orange-200 dark:border-orange-800">
+        <Card className="border-slate-200 dark:border-slate-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-orange-700 dark:text-orange-300">Atrasadas</CardTitle>
+            <CardTitle className="text-slate-700 dark:text-slate-300">Atrasadas</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-orange-900 dark:text-orange-100">3</p>
+            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">3</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border-purple-200 dark:border-purple-800">
+        <Card className="border-slate-200 dark:border-slate-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-purple-700 dark:text-purple-300">Esta Semana</CardTitle>
+            <CardTitle className="text-slate-700 dark:text-slate-300">Esta Semana</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">15</p>
+            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">15</p>
           </CardContent>
         </Card>
       </div>
@@ -92,9 +92,9 @@ export default function Tasks() {
                 completed: true
               },
             ].map((task, index) => (
-              <div key={index} className="flex items-start gap-4 p-4 rounded-lg border bg-card hover:shadow-md transition-shadow">
+              <div key={index} className="flex items-start gap-4 p-4 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                 <div className={`w-5 h-5 rounded border-2 flex items-center justify-center mt-1 ${
-                  task.completed ? 'bg-green-500 border-green-500' : 'border-muted-foreground'
+                  task.completed ? 'bg-slate-500 border-slate-500' : 'border-muted-foreground'
                 }`}>
                   {task.completed && <Check className="h-3 w-3 text-white" />}
                 </div>
@@ -107,9 +107,9 @@ export default function Tasks() {
                   
                   <div className="flex items-center gap-4 text-xs">
                     <span className={`px-2 py-1 rounded-full ${
-                      task.priority === 'Alta' ? 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-300' :
-                      task.priority === 'Média' ? 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300' :
-                      'bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300'
+                      task.priority === 'Alta' ? 'bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300' :
+                      task.priority === 'Média' ? 'bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400' :
+                      'bg-slate-50 text-slate-500 dark:bg-slate-900 dark:text-slate-500'
                     }`}>
                       {task.priority}
                     </span>

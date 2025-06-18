@@ -10,11 +10,11 @@ interface LayoutProps {
 export function Layout({ children }: LayoutProps) {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+      <div className="min-h-screen flex w-full bg-slate-50 dark:bg-slate-950">
         <AppSidebar />
         
         <div className="flex-1 flex flex-col">
-          <header className="h-16 border-b border-border/40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-sm flex items-center justify-between px-6">
+          <header className="h-16 border-b border-border/40 bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm flex items-center justify-between px-6">
             <div className="flex items-center gap-4">
               <SidebarTrigger className="md:hidden" />
               <div className="hidden md:block">
