@@ -4,272 +4,500 @@
 
 @layer base {
   :root {
-    /* === TEMA NEUTRO PROFISSIONAL === */
-    /* Fundo principal: BRANCO PURO */
+    /* ===== SISTEMA DE CORES NEUTRO PROFISSIONAL ===== */
+    
+    /* Cores base - branco puro e cinza escuro */
     --background: 255 255 255;
-    --foreground: 30 41 59;
-
-    /* Cards: Branco com bordas sutis */
+    --foreground: 15 23 42;
+    
+    /* Cards e superfícies */
     --card: 255 255 255;
-    --card-foreground: 30 41 59;
-
-    /* Popover: Branco puro */
+    --card-foreground: 15 23 42;
+    
+    /* Popover */
     --popover: 255 255 255;
-    --popover-foreground: 30 41 59;
-
-    /* Primary: Azul corporativo */
-    --primary: 30 64 175;
+    --popover-foreground: 15 23 42;
+    
+    /* Azul corporativo moderno */
+    --primary: 59 130 246;
     --primary-foreground: 255 255 255;
-
-    /* Secondary: Cinza claro neutro */
+    
+    /* Cinza neutro para secundário */
     --secondary: 248 250 252;
     --secondary-foreground: 71 85 105;
-
-    /* Muted: Cinza muito claro */
+    
+    /* Muted em tons neutros */
     --muted: 241 245 249;
     --muted-foreground: 100 116 139;
-
-    /* Accent: Cinza médio */
+    
+    /* Accent neutro */
     --accent: 226 232 240;
     --accent-foreground: 51 65 85;
-
-    /* Destructive: Vermelho limpo */
-    --destructive: 220 38 38;
+    
+    /* Destrutivo em vermelho */
+    --destructive: 239 68 68;
     --destructive-foreground: 255 255 255;
-
-    /* Bordas: Cinza claro */
-    --border: 203 213 225;
-    --input: 241 245 249;
-    --ring: 30 64 175;
-
-    /* Radius padrão */
+    
+    /* Bordas e inputs neutros */
+    --border: 226 232 240;
+    --input: 248 250 252;
+    --ring: 59 130 246;
+    
     --radius: 0.5rem;
-
-    /* === SIDEBAR === */
+    
+    /* Sidebar neutra */
     --sidebar-background: 255 255 255;
-    --sidebar-foreground: 51 65 85;
-    --sidebar-primary: 30 64 175;
+    --sidebar-foreground: 71 85 105;
+    --sidebar-primary: 59 130 246;
     --sidebar-primary-foreground: 255 255 255;
-    --sidebar-accent: 241 245 249;
+    --sidebar-accent: 248 250 252;
     --sidebar-accent-foreground: 71 85 105;
-    --sidebar-border: 203 213 225;
-    --sidebar-ring: 30 64 175;
+    --sidebar-border: 226 232 240;
+    --sidebar-ring: 59 130 246;
   }
 
   .dark {
-    /* === DARK MODE ELEGANTE === */
-    /* Fundo: Azul escuro profissional */
+    /* ===== DARK MODE ELEGANTE ===== */
+    
+    /* Fundos escuros elegantes */
     --background: 15 23 42;
     --foreground: 248 250 252;
-
-    /* Cards: Azul escuro */
+    
+    /* Cards escuros */
     --card: 30 41 59;
     --card-foreground: 248 250 252;
-
-    /* Popover: Azul escuro */
+    
+    /* Popover escuro */
     --popover: 30 41 59;
     --popover-foreground: 248 250 252;
-
-    /* Primary: Azul claro */
-    --primary: 59 130 246;
+    
+    /* Azul mais claro para dark mode */
+    --primary: 96 165 250;
     --primary-foreground: 15 23 42;
-
-    /* Secondary: Azul médio */
+    
+    /* Secundário escuro */
     --secondary: 51 65 85;
-    --secondary-foreground: 226 232 240;
-
-    /* Muted: Azul acinzentado */
+    --secondary-foreground: 203 213 225;
+    
+    /* Muted escuro */
     --muted: 51 65 85;
     --muted-foreground: 148 163 184;
-
-    /* Accent: Azul médio */
+    
+    /* Accent escuro */
     --accent: 71 85 105;
     --accent-foreground: 203 213 225;
-
-    /* Destructive: Vermelho */
-    --destructive: 239 68 68;
+    
+    /* Destrutivo mais suave no dark */
+    --destructive: 220 38 38;
     --destructive-foreground: 248 250 252;
-
-    /* Bordas: Azul escuro */
-    --border: 51 65 85;
+    
+    /* Bordas escuras */
+    --border: 71 85 105;
     --input: 51 65 85;
-    --ring: 59 130 246;
-
-    /* === SIDEBAR DARK === */
+    --ring: 96 165 250;
+    
+    /* Sidebar escura */
     --sidebar-background: 30 41 59;
     --sidebar-foreground: 203 213 225;
-    --sidebar-primary: 59 130 246;
+    --sidebar-primary: 96 165 250;
     --sidebar-primary-foreground: 15 23 42;
     --sidebar-accent: 51 65 85;
     --sidebar-accent-foreground: 203 213 225;
-    --sidebar-border: 51 65 85;
-    --sidebar-ring: 59 130 246;
+    --sidebar-border: 71 85 105;
+    --sidebar-ring: 96 165 250;
   }
 }
 
 @layer base {
-  /* Reset global */
   * {
-    border-color: hsl(var(--border));
-  }
-
-  /* HTML e Body */
-  html {
-    background-color: rgb(255, 255, 255);
+    @apply border-border;
   }
 
   body {
-    background-color: rgb(255, 255, 255);
-    color: rgb(30, 41, 59);
-    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Dark mode body */
-  .dark body {
-    background-color: rgb(15, 23, 42);
-    color: rgb(248, 250, 252);
-  }
-
-  /* Headings */
   h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     letter-spacing: -0.025em;
-    color: rgb(30, 41, 59);
-  }
-
-  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
-    color: rgb(248, 250, 252);
-  }
-
-  /* Links */
-  a {
-    color: rgb(30, 64, 175);
-    text-decoration: none;
-  }
-
-  .dark a {
-    color: rgb(59, 130, 246);
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  /* Root container */
-  #root {
-    background-color: rgb(255, 255, 255);
-    min-height: 100vh;
-  }
-
-  .dark #root {
-    background-color: rgb(15, 23, 42);
   }
 }
 
 @layer components {
-  /* === COMPONENTES PERSONALIZADOS === */
-
-  /* Card com sombra suave */
-  .card-modern {
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(203, 213, 225);
-    border-radius: 0.75rem;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-    transition: all 0.2s ease;
+  /* ===== SOBRESCRITA UNIVERSAL DE BOTÕES ===== */
+  
+  /* BOTÕES PRIMÁRIOS - Azul corporativo */
+  .btn,
+  button[data-primary="true"],
+  .bg-primary,
+  .bg-blue-500,
+  .bg-blue-600 {
+    background-color: rgb(59, 130, 246) !important;
+    color: white !important;
+    border-color: rgb(59, 130, 246) !important;
   }
-
-  .dark .card-modern {
-    background-color: rgb(30, 41, 59);
-    border-color: rgb(51, 65, 85);
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  
+  .btn:hover,
+  button[data-primary="true"]:hover,
+  .bg-primary:hover,
+  .bg-blue-500:hover,
+  .bg-blue-600:hover {
+    background-color: rgb(37, 99, 235) !important;
   }
-
-  .card-modern:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transform: translateY(-1px);
+  
+  /* ELIMINAR TODAS AS CORES QUENTES */
+  .bg-stone-400, .bg-stone-500, .bg-stone-600, .bg-stone-700,
+  .bg-amber-400, .bg-amber-500, .bg-amber-600, .bg-amber-700,
+  .bg-orange-400, .bg-orange-500, .bg-orange-600, .bg-orange-700,
+  .bg-yellow-400, .bg-yellow-500, .bg-yellow-600, .bg-yellow-700,
+  .bg-brown-400, .bg-brown-500, .bg-brown-600, .bg-brown-700,
+  .bg-red-400, .bg-red-500, .bg-red-600, .bg-red-700 {
+    background-color: rgb(59, 130, 246) !important;
+    color: white !important;
+    border-color: rgb(59, 130, 246) !important;
   }
-
-  .dark .card-modern:hover {
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  
+  .bg-stone-400:hover, .bg-stone-500:hover, .bg-stone-600:hover, .bg-stone-700:hover,
+  .bg-amber-400:hover, .bg-amber-500:hover, .bg-amber-600:hover, .bg-amber-700:hover,
+  .bg-orange-400:hover, .bg-orange-500:hover, .bg-orange-600:hover, .bg-orange-700:hover,
+  .bg-yellow-400:hover, .bg-yellow-500:hover, .bg-yellow-600:hover, .bg-yellow-700:hover,
+  .bg-brown-400:hover, .bg-brown-500:hover, .bg-brown-600:hover, .bg-brown-700:hover,
+  .bg-red-400:hover, .bg-red-500:hover, .bg-red-600:hover, .bg-red-700:hover {
+    background-color: rgb(37, 99, 235) !important;
   }
-
-  /* Background gradiente sutil */
+  
+  /* BOTÕES SECUNDÁRIOS - Cinza neutro */
+  .bg-secondary,
+  .bg-gray-100,
+  .bg-gray-200,
+  .bg-slate-100,
+  .bg-slate-200 {
+    background-color: rgb(248, 250, 252) !important;
+    color: rgb(71, 85, 105) !important;
+    border-color: rgb(226, 232, 240) !important;
+  }
+  
+  .bg-secondary:hover,
+  .bg-gray-100:hover,
+  .bg-gray-200:hover,
+  .bg-slate-100:hover,
+  .bg-slate-200:hover {
+    background-color: rgb(241, 245, 249) !important;
+  }
+  
+  /* BOTÕES OUTLINE - Neutros */
+  .border-stone-300, .border-stone-400,
+  .border-amber-300, .border-amber-400,
+  .border-orange-300, .border-orange-400,
+  .border-yellow-300, .border-yellow-400,
+  .border-brown-300, .border-brown-400,
+  button[variant="outline"] {
+    background-color: transparent !important;
+    border-color: rgb(203, 213, 225) !important;
+    color: rgb(71, 85, 105) !important;
+  }
+  
+  .border-stone-300:hover, .border-stone-400:hover,
+  .border-amber-300:hover, .border-amber-400:hover,
+  .border-orange-300:hover, .border-orange-400:hover,
+  .border-yellow-300:hover, .border-yellow-400:hover,
+  .border-brown-300:hover, .border-brown-400:hover,
+  button[variant="outline"]:hover {
+    background-color: rgb(248, 250, 252) !important;
+    color: rgb(15, 23, 42) !important;
+  }
+  
+  /* MODO ESCURO - Botões */
+  .dark .bg-stone-400, .dark .bg-stone-500, .dark .bg-stone-600, .dark .bg-stone-700,
+  .dark .bg-amber-400, .dark .bg-amber-500, .dark .bg-amber-600, .dark .bg-amber-700,
+  .dark .bg-orange-400, .dark .bg-orange-500, .dark .bg-orange-600, .dark .bg-orange-700,
+  .dark .bg-yellow-400, .dark .bg-yellow-500, .dark .bg-yellow-600, .dark .bg-yellow-700,
+  .dark .bg-brown-400, .dark .bg-brown-500, .dark .bg-brown-600, .dark .bg-brown-700,
+  .dark .bg-red-400, .dark .bg-red-500, .dark .bg-red-600, .dark .bg-red-700,
+  .dark .bg-primary,
+  .dark .bg-blue-500,
+  .dark .bg-blue-600 {
+    background-color: rgb(96, 165, 250) !important;
+    color: rgb(15, 23, 42) !important;
+    border-color: rgb(96, 165, 250) !important;
+  }
+  
+  .dark .bg-stone-400:hover, .dark .bg-stone-500:hover, .dark .bg-stone-600:hover, .dark .bg-stone-700:hover,
+  .dark .bg-amber-400:hover, .dark .bg-amber-500:hover, .dark .bg-amber-600:hover, .dark .bg-amber-700:hover,
+  .dark .bg-orange-400:hover, .dark .bg-orange-500:hover, .dark .bg-orange-600:hover, .dark .bg-orange-700:hover,
+  .dark .bg-yellow-400:hover, .dark .bg-yellow-500:hover, .dark .bg-yellow-600:hover, .dark .bg-yellow-700:hover,
+  .dark .bg-brown-400:hover, .dark .bg-brown-500:hover, .dark .bg-brown-600:hover, .dark .bg-brown-700:hover,
+  .dark .bg-red-400:hover, .dark .bg-red-500:hover, .dark .bg-red-600:hover, .dark .bg-red-700:hover,
+  .dark .bg-primary:hover,
+  .dark .bg-blue-500:hover,
+  .dark .bg-blue-600:hover {
+    background-color: rgb(59, 130, 246) !important;
+  }
+  
+  /* MODO ESCURO - Botões secundários */
+  .dark .bg-secondary,
+  .dark .bg-gray-100,
+  .dark .bg-gray-200,
+  .dark .bg-slate-100,
+  .dark .bg-slate-200 {
+    background-color: rgb(51, 65, 85) !important;
+    color: rgb(203, 213, 225) !important;
+    border-color: rgb(71, 85, 105) !important;
+  }
+  
+  .dark .bg-secondary:hover,
+  .dark .bg-gray-100:hover,
+  .dark .bg-gray-200:hover,
+  .dark .bg-slate-100:hover,
+  .dark .bg-slate-200:hover {
+    background-color: rgb(71, 85, 105) !important;
+  }
+  
+  /* MODO ESCURO - Botões outline */
+  .dark .border-stone-300, .dark .border-stone-400,
+  .dark .border-amber-300, .dark .border-amber-400,
+  .dark .border-orange-300, .dark .border-orange-400,
+  .dark .border-yellow-300, .dark .border-yellow-400,
+  .dark .border-brown-300, .dark .border-brown-400,
+  .dark button[variant="outline"] {
+    background-color: transparent !important;
+    border-color: rgb(100, 116, 139) !important;
+    color: rgb(203, 213, 225) !important;
+  }
+  
+  .dark .border-stone-300:hover, .dark .border-stone-400:hover,
+  .dark .border-amber-300:hover, .dark .border-amber-400:hover,
+  .dark .border-orange-300:hover, .dark .border-orange-400:hover,
+  .dark .border-yellow-300:hover, .dark .border-yellow-400:hover,
+  .dark .border-brown-300:hover, .dark .border-brown-400:hover,
+  .dark button[variant="outline"]:hover {
+    background-color: rgb(51, 65, 85) !important;
+    color: rgb(248, 250, 252) !important;
+  }
+  
+  /* ===== CORREÇÕES ESPECÍFICAS DE COMPONENTES ===== */
+  
+  /* Botões do shadcn/ui */
+  .inline-flex.items-center.justify-center {
+    background-color: rgb(59, 130, 246) !important;
+    color: white !important;
+  }
+  
+  .inline-flex.items-center.justify-center:hover {
+    background-color: rgb(37, 99, 235) !important;
+  }
+  
+  .dark .inline-flex.items-center.justify-center {
+    background-color: rgb(96, 165, 250) !important;
+    color: rgb(15, 23, 42) !important;
+  }
+  
+  .dark .inline-flex.items-center.justify-center:hover {
+    background-color: rgb(59, 130, 246) !important;
+  }
+  
+  /* Botões com gaps (ícones) */
+  .gap-2 button,
+  button.gap-2,
+  .flex.gap-2 button {
+    background-color: rgb(59, 130, 246) !important;
+    color: white !important;
+    border-color: rgb(59, 130, 246) !important;
+  }
+  
+  .gap-2 button:hover,
+  button.gap-2:hover,
+  .flex.gap-2 button:hover {
+    background-color: rgb(37, 99, 235) !important;
+  }
+  
+  .dark .gap-2 button,
+  .dark button.gap-2,
+  .dark .flex.gap-2 button {
+    background-color: rgb(96, 165, 250) !important;
+    color: rgb(15, 23, 42) !important;
+  }
+  
+  .dark .gap-2 button:hover,
+  .dark button.gap-2:hover,
+  .dark .flex.gap-2 button:hover {
+    background-color: rgb(59, 130, 246) !important;
+  }
+  
+  /* ===== CORREÇÕES DE EMERGÊNCIA ===== */
+  
+  /* Qualquer elemento com style inline problemático */
+  *[style*="background-color: rgb(120"],
+  *[style*="background-color: rgb(168"],
+  *[style*="background-color: rgb(245"],
+  *[style*="background: rgb(120"],
+  *[style*="background: rgb(168"],
+  *[style*="background: rgb(245"] {
+    background-color: rgb(59, 130, 246) !important;
+    background: rgb(59, 130, 246) !important;
+    color: white !important;
+  }
+  
+  /* Seletores genéricos para pegar qualquer botão perdido */
+  button:not([variant="outline"]):not([variant="ghost"]):not([variant="link"]) {
+    background-color: rgb(59, 130, 246) !important;
+    color: white !important;
+    border-color: rgb(59, 130, 246) !important;
+  }
+  
+  button:not([variant="outline"]):not([variant="ghost"]):not([variant="link"]):hover {
+    background-color: rgb(37, 99, 235) !important;
+  }
+  
+  .dark button:not([variant="outline"]):not([variant="ghost"]):not([variant="link"]) {
+    background-color: rgb(96, 165, 250) !important;
+    color: rgb(15, 23, 42) !important;
+  }
+  
+  .dark button:not([variant="outline"]):not([variant="ghost"]):not([variant="link"]):hover {
+    background-color: rgb(59, 130, 246) !important;
+  }
+  
+  /* ===== GRADIENTES E EFEITOS ===== */
+  
   .gradient-bg {
-    background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(248, 250, 252) 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
   }
-
+  
   .dark .gradient-bg {
-    background: linear-gradient(135deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   }
-
-  /* Glass effect */
+  
   .glass-effect {
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(203, 213, 225, 0.5);
-  }
-
-  .dark .glass-effect {
-    background: rgba(30, 41, 59, 0.9);
-    border: 1px solid rgba(51, 65, 85, 0.5);
-  }
-
-  /* Header */
-  .header-modern {
-    background-color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgb(203, 213, 225);
+    border: 1px solid rgba(203, 213, 225, 0.2);
   }
-
-  .dark .header-modern {
-    background-color: rgba(30, 41, 59, 0.95);
-    border-bottom-color: rgb(51, 65, 85);
-  }
-
-  /* Main content */
-  .main-content {
-    background-color: rgb(255, 255, 255);
-    min-height: 100vh;
-  }
-
-  .dark .main-content {
-    background-color: rgb(15, 23, 42);
+  
+  .dark .glass-effect {
+    background: rgba(30, 41, 59, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 116, 139, 0.2);
   }
 }
 
-@layer utilities {
-  /* Animações */
-  .fade-in {
-    animation: fadeIn 0.3s ease-in-out;
-  }
+/* ===== CORREÇÃO ESPECÍFICA PARA SIDEBAR AMARELA ===== */
+/* Adicione no final do src/index.css */
 
-  .slide-up {
-    animation: slideUp 0.4s ease-out;
-  }
+/* Forçar cores azuis para item ativo da sidebar */
+[data-sidebar="menu-button"][data-active="true"],
+.sidebar-active,
+a[aria-current="page"],
+a.active,
+.bg-yellow-100,
+.bg-yellow-200,
+.bg-amber-100,
+.bg-amber-200 {
+  background-color: rgb(239, 246, 255) !important; /* blue-50 */
+  color: rgb(29, 78, 216) !important; /* blue-700 */
+  border-color: rgb(191, 219, 254) !important; /* blue-200 */
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Dark mode para item ativo */
+.dark [data-sidebar="menu-button"][data-active="true"],
+.dark .sidebar-active,
+.dark a[aria-current="page"],
+.dark a.active,
+.dark .bg-yellow-100,
+.dark .bg-yellow-200,
+.dark .bg-amber-100,
+.dark .bg-amber-200 {
+  background-color: rgba(59, 130, 246, 0.1) !important; /* blue-600 com transparência */
+  color: rgb(147, 197, 253) !important; /* blue-300 */
+  border-color: rgb(30, 58, 138) !important; /* blue-900 */
+}
 
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+/* Hover states específicos */
+[data-sidebar="menu-button"]:hover:not([data-active="true"]) {
+  background-color: rgb(248, 250, 252) !important; /* slate-50 */
+  color: rgb(15, 23, 42) !important; /* slate-900 */
+}
+
+.dark [data-sidebar="menu-button"]:hover:not([data-active="true"]) {
+  background-color: rgb(30, 41, 59) !important; /* slate-800 */
+  color: rgb(248, 250, 252) !important; /* slate-50 */
+}
+
+/* Forçar ícones azuis no item ativo */
+[data-sidebar="menu-button"][data-active="true"] svg,
+.sidebar-active svg,
+a[aria-current="page"] svg,
+a.active svg {
+  color: rgb(37, 99, 235) !important; /* blue-600 */
+}
+
+.dark [data-sidebar="menu-button"][data-active="true"] svg,
+.dark .sidebar-active svg,
+.dark a[aria-current="page"] svg,
+.dark a.active svg {
+  color: rgb(96, 165, 250) !important; /* blue-400 */
+}
+
+/* Eliminar qualquer amarelo residual */
+.bg-yellow-50,
+.bg-yellow-100,
+.bg-yellow-200,
+.bg-amber-50,
+.bg-amber-100,
+.bg-amber-200,
+.text-yellow-600,
+.text-yellow-700,
+.text-yellow-800,
+.text-amber-600,
+.text-amber-700,
+.text-amber-800 {
+  background-color: rgb(239, 246, 255) !important;
+  color: rgb(29, 78, 216) !important;
+}
+
+.dark .bg-yellow-50,
+.dark .bg-yellow-100,
+.dark .bg-yellow-200,
+.dark .bg-amber-50,
+.dark .bg-amber-100,
+.dark .bg-amber-200,
+.dark .text-yellow-600,
+.dark .text-yellow-700,
+.dark .text-yellow-800,
+.dark .text-amber-600,
+.dark .text-amber-700,
+.dark .text-amber-800 {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: rgb(147, 197, 253) !important;
+}
+
+/* NavLink específico */
+.NavLink-active,
+nav a.active,
+nav a[aria-current="page"] {
+  background-color: rgb(239, 246, 255) !important;
+  color: rgb(29, 78, 216) !important;
+  border: 1px solid rgb(191, 219, 254) !important;
+}
+
+.dark .NavLink-active,
+.dark nav a.active,
+.dark nav a[aria-current="page"] {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: rgb(147, 197, 253) !important;
+  border: 1px solid rgb(30, 58, 138) !important;
+}
+
+/* Sidebar específica do shadcn */
+[data-sidebar="content"] a[data-active="true"],
+[data-sidebar="menu-button"][data-active="true"] {
+  background: rgb(239, 246, 255) !important;
+  color: rgb(29, 78, 216) !important;
+}
+
+.dark [data-sidebar="content"] a[data-active="true"],
+.dark [data-sidebar="menu-button"][data-active="true"] {
+  background: rgba(59, 130, 246, 0.1) !important;
+  color: rgb(147, 197, 253) !important;
 }
