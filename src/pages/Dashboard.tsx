@@ -26,7 +26,7 @@ export default function Dashboard() {
 
       {/* Quick Stats */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-amber-100 to-amber-200 dark:from-amber-900/30 dark:to-amber-800/30 text-amber-900 dark:text-amber-100">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Tarefas Hoje</CardTitle>
@@ -35,11 +35,11 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">5</div>
-            <p className="text-xs opacity-90">3 concluídas</p>
+            <p className="text-xs opacity-80">3 concluídas</p>
           </CardContent>
         </Card>
 
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-green-500 to-green-600 text-white">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-sage-100 to-sage-200 dark:from-green-900/20 dark:to-green-800/20 text-sage-900 dark:text-green-100">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Saldo</CardTitle>
@@ -48,14 +48,14 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">R$ 2.450</div>
-            <p className="text-xs opacity-90 flex items-center gap-1">
+            <p className="text-xs opacity-80 flex items-center gap-1">
               <ArrowUp className="h-3 w-3" />
               +12% este mês
             </p>
           </CardContent>
         </Card>
 
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-500 to-purple-600 text-white">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-rose-100 to-rose-200 dark:from-rose-900/20 dark:to-rose-800/20 text-rose-900 dark:text-rose-100">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Hábitos</CardTitle>
@@ -64,11 +64,11 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">3/5</div>
-            <p className="text-xs opacity-90">Hoje cumpridos</p>
+            <p className="text-xs opacity-80">Hoje cumpridos</p>
           </CardContent>
         </Card>
 
-        <Card className="border-0 shadow-lg bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+        <Card className="border-0 shadow-lg bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-900/20 dark:to-stone-800/20 text-stone-900 dark:text-stone-100">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Metas Ativas</CardTitle>
@@ -77,7 +77,7 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">4</div>
-            <p className="text-xs opacity-90">2 próximas do prazo</p>
+            <p className="text-xs opacity-80">2 próximas do prazo</p>
           </CardContent>
         </Card>
       </div>

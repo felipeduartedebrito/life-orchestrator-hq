@@ -19,33 +19,33 @@ export default function Goals() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-200 dark:border-blue-800">
+        <Card className="bg-gradient-to-br from-sage-50 to-sage-100 dark:from-green-900/20 dark:to-green-800/20 border-sage-200 dark:border-green-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-blue-700 dark:text-blue-300">Metas Ativas</CardTitle>
+            <CardTitle className="text-sage-700 dark:text-green-300">Metas Ativas</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">4</p>
-            <p className="text-xs text-blue-600 dark:text-blue-400">em andamento</p>
+            <p className="text-2xl font-bold text-sage-900 dark:text-green-100">4</p>
+            <p className="text-xs text-sage-600 dark:text-green-400">em andamento</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border-green-200 dark:border-green-800">
+        <Card className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 border-emerald-200 dark:border-emerald-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-green-700 dark:text-green-300">Concluídas</CardTitle>
+            <CardTitle className="text-emerald-700 dark:text-emerald-300">Concluídas</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-green-900 dark:text-green-100">7</p>
-            <p className="text-xs text-green-600 dark:text-green-400">este ano</p>
+            <p className="text-2xl font-bold text-emerald-900 dark:text-emerald-100">7</p>
+            <p className="text-xs text-emerald-600 dark:text-emerald-400">este ano</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 border-orange-200 dark:border-orange-800">
+        <Card className="bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/20 dark:to-amber-800/20 border-amber-200 dark:border-amber-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-orange-700 dark:text-orange-300">Próximas do Prazo</CardTitle>
+            <CardTitle className="text-amber-700 dark:text-amber-300">Próximas do Prazo</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-orange-900 dark:text-orange-100">2</p>
-            <p className="text-xs text-orange-600 dark:text-orange-400">vencendo em 30 dias</p>
+            <p className="text-2xl font-bold text-amber-900 dark:text-amber-100">2</p>
+            <p className="text-xs text-amber-600 dark:text-amber-400">vencendo em 30 dias</p>
           </CardContent>
         </Card>
       </div>
@@ -101,8 +101,8 @@ export default function Goals() {
                   <CardDescription>{goal.description}</CardDescription>
                 </div>
                 <span className={`px-2 py-1 rounded-full text-xs ${
-                  goal.priority === 'Alta' ? 'bg-red-100 text-red-700 dark:bg-red-900/20 dark:text-red-300' :
-                  'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/20 dark:text-yellow-300'
+                  goal.priority === 'Alta' ? 'bg-rose-100 text-rose-700 dark:bg-rose-900/20 dark:text-rose-300' :
+                  'bg-amber-100 text-amber-700 dark:bg-amber-900/20 dark:text-amber-300'
                 }`}>
                   {goal.priority}
                 </span>

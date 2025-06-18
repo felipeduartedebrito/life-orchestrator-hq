@@ -39,16 +39,16 @@ export function AppSidebar() {
   const getNavCls = ({ isActive: active }: { isActive: boolean }) =>
     `flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-200 ${
       active 
-        ? "bg-primary text-primary-foreground shadow-sm" 
-        : "hover:bg-accent text-foreground hover:text-accent-foreground"
+        ? "bg-stone-200 text-stone-800 dark:bg-stone-700 dark:text-stone-100 shadow-sm" 
+        : "hover:bg-stone-100 dark:hover:bg-stone-800 text-foreground hover:text-accent-foreground"
     }`
 
   return (
     <Sidebar className={collapsed ? "w-16" : "w-64"} collapsible="icon">
       <div className="p-4 border-b border-border/40">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-slate-900 dark:bg-slate-100 flex items-center justify-center">
-            <span className="text-white dark:text-slate-900 font-bold text-sm">L</span>
+          <div className="w-8 h-8 rounded-md bg-stone-600 dark:bg-stone-300 flex items-center justify-center">
+            <span className="text-white dark:text-stone-900 font-bold text-sm">L</span>
           </div>
           {!collapsed && (
             <div>

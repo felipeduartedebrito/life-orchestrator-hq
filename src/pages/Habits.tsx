@@ -18,33 +18,33 @@ export default function Habits() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 border-green-200 dark:border-green-800">
+        <Card className="bg-gradient-to-br from-emerald-50 to-emerald-100 dark:from-emerald-900/20 dark:to-emerald-800/20 border-emerald-200 dark:border-emerald-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-green-700 dark:text-green-300">Completados Hoje</CardTitle>
+            <CardTitle className="text-emerald-700 dark:text-emerald-300">Completados Hoje</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-green-900 dark:text-green-100">3/5</p>
-            <p className="text-xs text-green-600 dark:text-green-400">60% de conclusão</p>
+            <p className="text-2xl font-bold text-emerald-900 dark:text-emerald-100">3/5</p>
+            <p className="text-xs text-emerald-600 dark:text-emerald-400">60% de conclusão</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 border-blue-200 dark:border-blue-800">
+        <Card className="bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900/20 dark:to-stone-800/20 border-stone-200 dark:border-stone-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-blue-700 dark:text-blue-300">Maior Sequência</CardTitle>
+            <CardTitle className="text-stone-700 dark:text-stone-300">Maior Sequência</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-blue-900 dark:text-blue-100">23 dias</p>
-            <p className="text-xs text-blue-600 dark:text-blue-400">Beber 2L de água</p>
+            <p className="text-2xl font-bold text-stone-900 dark:text-stone-100">23 dias</p>
+            <p className="text-xs text-stone-600 dark:text-stone-400">Beber 2L de água</p>
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 border-purple-200 dark:border-purple-800">
+        <Card className="bg-gradient-to-br from-rose-50 to-rose-100 dark:from-rose-900/20 dark:to-rose-800/20 border-rose-200 dark:border-rose-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-purple-700 dark:text-purple-300">Hábitos Ativos</CardTitle>
+            <CardTitle className="text-rose-700 dark:text-rose-300">Hábitos Ativos</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-purple-900 dark:text-purple-100">8</p>
-            <p className="text-xs text-purple-600 dark:text-purple-400">em desenvolvimento</p>
+            <p className="text-2xl font-bold text-rose-900 dark:text-rose-100">8</p>
+            <p className="text-xs text-rose-600 dark:text-rose-400">em desenvolvimento</p>
           </CardContent>
         </Card>
       </div>

@@ -18,7 +18,7 @@ export default function Finances() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Card className="bg-gradient-to-br from-green-500 to-green-600 text-white">
+        <Card className="bg-gradient-to-br from-emerald-400 to-emerald-500 text-white">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Receitas</CardTitle>
@@ -31,7 +31,7 @@ export default function Finances() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-red-500 to-red-600 text-white">
+        <Card className="bg-gradient-to-br from-rose-400 to-rose-500 text-white">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Despesas</CardTitle>
@@ -44,7 +44,7 @@ export default function Finances() {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-blue-500 to-blue-600 text-white">
+        <Card className="bg-gradient-to-br from-stone-400 to-stone-500 text-white">
           <CardHeader className="pb-2">
             <div className="flex items-center justify-between">
               <CardTitle className="text-sm font-medium">Saldo</CardTitle>
@@ -79,11 +79,11 @@ export default function Finances() {
                 <div key={index} className="flex items-center justify-between p-3 rounded-lg border bg-card">
                   <div className="flex items-center gap-3">
                     <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                      transaction.type === 'Receita' ? 'bg-green-100 dark:bg-green-900/20' : 'bg-red-100 dark:bg-red-900/20'
+                      transaction.type === 'Receita' ? 'bg-emerald-100 dark:bg-emerald-900/20' : 'bg-rose-100 dark:bg-rose-900/20'
                     }`}>
                       {transaction.type === 'Receita' ? 
-                        <ArrowUp className="h-4 w-4 text-green-600 dark:text-green-400" /> : 
-                        <ArrowDown className="h-4 w-4 text-red-600 dark:text-red-400" />
+                        <ArrowUp className="h-4 w-4 text-emerald-600 dark:text-emerald-400" /> : 
+                        <ArrowDown className="h-4 w-4 text-rose-600 dark:text-rose-400" />
                       }
                     </div>
                     <div>
@@ -92,7 +92,7 @@ export default function Finances() {
                     </div>
                   </div>
                   <div className={`font-semibold ${
-                    transaction.amount > 0 ? 'text-green-600 dark:text-green-400' : 'text-red-600 dark:text-red-400'
+                    transaction.amount > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-rose-600 dark:text-rose-400'
                   }`}>
                     {transaction.amount > 0 ? '+' : ''}R$ {Math.abs(transaction.amount).toFixed(2)}
                   </div>
@@ -110,11 +110,11 @@ export default function Finances() {
           <CardContent>
             <div className="space-y-4">
               {[
-                { category: "Alimentação", amount: 650, percentage: 36, color: "bg-blue-500" },
-                { category: "Transporte", amount: 380, percentage: 21, color: "bg-green-500" },
-                { category: "Contas", amount: 290, percentage: 16, color: "bg-yellow-500" },
-                { category: "Lazer", amount: 220, percentage: 12, color: "bg-purple-500" },
-                { category: "Outros", amount: 260, percentage: 15, color: "bg-gray-500" },
+                { category: "Alimentação", amount: 650, percentage: 36, color: "bg-amber-400" },
+                { category: "Transporte", amount: 380, percentage: 21, color: "bg-emerald-400" },
+                { category: "Contas", amount: 290, percentage: 16, color: "bg-stone-400" },
+                { category: "Lazer", amount: 220, percentage: 12, color: "bg-rose-400" },
+                { category: "Outros", amount: 260, percentage: 15, color: "bg-slate-400" },
               ].map((item, index) => (
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between text-sm">

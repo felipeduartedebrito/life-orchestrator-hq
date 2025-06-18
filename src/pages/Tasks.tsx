@@ -18,39 +18,39 @@ export default function Tasks() {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-        <Card className="border-slate-200 dark:border-slate-800">
+        <Card className="border-stone-200 dark:border-stone-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-slate-700 dark:text-slate-300">Pendentes</CardTitle>
+            <CardTitle className="text-stone-700 dark:text-stone-300">Pendentes</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">8</p>
+            <p className="text-2xl font-bold text-stone-900 dark:text-stone-100">8</p>
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 dark:border-slate-800">
+        <Card className="border-stone-200 dark:border-stone-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-slate-700 dark:text-slate-300">Concluídas</CardTitle>
+            <CardTitle className="text-stone-700 dark:text-stone-300">Concluídas</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">12</p>
+            <p className="text-2xl font-bold text-stone-900 dark:text-stone-100">12</p>
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 dark:border-slate-800">
+        <Card className="border-stone-200 dark:border-stone-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-slate-700 dark:text-slate-300">Atrasadas</CardTitle>
+            <CardTitle className="text-stone-700 dark:text-stone-300">Atrasadas</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">3</p>
+            <p className="text-2xl font-bold text-stone-900 dark:text-stone-100">3</p>
           </CardContent>
         </Card>
 
-        <Card className="border-slate-200 dark:border-slate-800">
+        <Card className="border-stone-200 dark:border-stone-800">
           <CardHeader className="pb-2">
-            <CardTitle className="text-slate-700 dark:text-slate-300">Esta Semana</CardTitle>
+            <CardTitle className="text-stone-700 dark:text-stone-300">Esta Semana</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">15</p>
+            <p className="text-2xl font-bold text-stone-900 dark:text-stone-100">15</p>
           </CardContent>
         </Card>
       </div>
