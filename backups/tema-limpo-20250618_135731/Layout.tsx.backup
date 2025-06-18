@@ -6,17 +6,16 @@ interface LayoutProps {
   children: React.ReactNode
 }
 
-// Named export (mantendo o mesmo padrão)
 export function Layout({ children }: LayoutProps) {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-white dark:bg-stone-950">
+      <div className="min-h-screen flex w-full bg-background">
         <AppSidebar />
         
         <div className="flex-1 flex flex-col">
-          <header className="h-16 border-b border-border/40 bg-white/95 dark:bg-stone-900/95 backdrop-blur-sm flex items-center justify-between px-6">
+          <header className="h-16 border-b border-border/50 bg-background/95 backdrop-blur-sm flex items-center justify-between px-6 card-shadow">
             <div className="flex items-center gap-4">
-              <SidebarTrigger className="md:hidden" />
+              <SidebarTrigger className="md:hidden hover:bg-accent rounded-md p-2 transition-colors" />
               <div className="hidden md:block">
                 <h1 className="text-xl font-semibold text-foreground">LifeOS</h1>
                 <p className="text-sm text-muted-foreground">Gestão Pessoal Inteligente</p>
@@ -28,14 +27,13 @@ export function Layout({ children }: LayoutProps) {
             </div>
           </header>
           
-          <main className="flex-1 p-6">
-            {children}
+          <main className="flex-1 p-6 bg-gradient-to-br from-background to-muted/20">
+            <div className="max-w-7xl mx-auto">
+              {children}
+            </div>
           </main>
         </div>
       </div>
     </SidebarProvider>
   )
 }
-
-// Adicionar default export também para garantir compatibilidade
-export default Layout

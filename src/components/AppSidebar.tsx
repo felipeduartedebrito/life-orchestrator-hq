@@ -1,5 +1,3 @@
-
-import { useState } from "react"
 import { Calendar, Settings, User, BarChart, Clock, Plus } from "lucide-react"
 import { NavLink, useLocation } from "react-router-dom"
 
@@ -12,7 +10,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarTrigger,
   useSidebar,
 } from "@/components/ui/sidebar"
 
@@ -35,33 +32,34 @@ export function AppSidebar() {
   const currentPath = location.pathname
   const collapsed = state === "collapsed"
 
-  const isActive = (path: string) => currentPath === path
   const getNavCls = ({ isActive: active }: { isActive: boolean }) =>
     `flex items-center gap-3 px-3 py-2 rounded-md transition-all duration-200 ${
       active 
-        ? "bg-stone-200 text-stone-800 dark:bg-stone-700 dark:text-stone-100 shadow-sm" 
-        : "hover:bg-stone-100 dark:hover:bg-stone-800 text-foreground hover:text-accent-foreground"
+        ? "bg-slate-100 text-slate-900 dark:bg-slate-700 dark:text-slate-100 shadow-sm" 
+        : "hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100"
     }`
 
   return (
-    <Sidebar className={collapsed ? "w-16" : "w-64"} collapsible="icon">
-      <div className="p-4 border-b border-border/40">
+    <Sidebar className={`${collapsed ? "w-16" : "w-64"} bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700`} collapsible="icon">
+      {/* Header da Sidebar */}
+      <div className="p-4 border-b border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900">
         <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-md bg-stone-600 dark:bg-stone-300 flex items-center justify-center">
-            <span className="text-white dark:text-stone-900 font-bold text-sm">L</span>
+          <div className="w-8 h-8 rounded-md bg-blue-600 flex items-center justify-center">
+            <span className="text-white font-bold text-sm">L</span>
           </div>
           {!collapsed && (
             <div>
-              <h2 className="font-semibold text-foreground">LifeOS</h2>
-              <p className="text-xs text-muted-foreground">Versão 1.0</p>
+              <h2 className="font-semibold text-slate-900 dark:text-slate-100">LifeOS</h2>
+              <p className="text-xs text-slate-600 dark:text-slate-400">Versão 1.0</p>
             </div>
           )}
         </div>
       </div>
 
-      <SidebarContent className="px-2">
+      {/* Conteúdo da Sidebar */}
+      <SidebarContent className="px-2 bg-white dark:bg-slate-900">
         <SidebarGroup>
-          <SidebarGroupLabel className={collapsed ? "sr-only" : ""}>
+          <SidebarGroupLabel className={`${collapsed ? "sr-only" : ""} text-slate-600 dark:text-slate-400`}>
             Principal
           </SidebarGroupLabel>
           <SidebarGroupContent>
@@ -81,7 +79,7 @@ export function AppSidebar() {
         </SidebarGroup>
 
         <SidebarGroup className="mt-auto">
-          <SidebarGroupLabel className={collapsed ? "sr-only" : ""}>
+          <SidebarGroupLabel className={`${collapsed ? "sr-only" : ""} text-slate-600 dark:text-slate-400`}>
             Configurações
           </SidebarGroupLabel>
           <SidebarGroupContent>

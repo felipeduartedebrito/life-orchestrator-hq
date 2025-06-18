@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* FORÇAR BRANCO PURO EM TUDO */
+    --background: 255 255 255 !important;
+    --foreground: 15 23 42 !important;
+
+    --card: 255 255 255 !important;
+    --card-foreground: 15 23 42 !important;
+
+    --popover: 255 255 255 !important;
+    --popover-foreground: 15 23 42 !important;
+
+    --primary: 51 65 85 !important;
+    --primary-foreground: 255 255 255 !important;
+
+    --secondary: 248 250 252 !important;
+    --secondary-foreground: 51 65 85 !important;
+
+    --muted: 248 250 252 !important;
+    --muted-foreground: 100 116 139 !important;
+
+    --accent: 241 245 249 !important;
+    --accent-foreground: 51 65 85 !important;
+
+    --destructive: 239 68 68 !important;
+    --destructive-foreground: 255 255 255 !important;
+
+    --border: 226 232 240 !important;
+    --input: 248 250 252 !important;
+    --ring: 51 65 85 !important;
+
+    --radius: 0.5rem;
+
+    /* SIDEBAR FORÇAR BRANCO */
+    --sidebar-background: 255 255 255 !important;
+    --sidebar-foreground: 51 65 85 !important;
+    --sidebar-primary: 71 85 105 !important;
+    --sidebar-primary-foreground: 255 255 255 !important;
+    --sidebar-accent: 248 250 252 !important;
+    --sidebar-accent-foreground: 51 65 85 !important;
+    --sidebar-border: 226 232 240 !important;
+    --sidebar-ring: 51 65 85 !important;
+  }
+
+  .dark {
+    --background: 15 23 42 !important;
+    --foreground: 241 245 249 !important;
+
+    --card: 30 41 59 !important;
+    --card-foreground: 241 245 249 !important;
+
+    --popover: 30 41 59 !important;
+    --popover-foreground: 241 245 249 !important;
+
+    --primary: 148 163 184 !important;
+    --primary-foreground: 15 23 42 !important;
+
+    --secondary: 51 65 85 !important;
+    --secondary-foreground: 241 245 249 !important;
+
+    --muted: 51 65 85 !important;
+    --muted-foreground: 148 163 184 !important;
+
+    --accent: 71 85 105 !important;
+    --accent-foreground: 241 245 249 !important;
+
+    --destructive: 239 68 68 !important;
+    --destructive-foreground: 241 245 249 !important;
+
+    --border: 51 65 85 !important;
+    --input: 51 65 85 !important;
+    --ring: 148 163 184 !important;
+
+    --sidebar-background: 30 41 59 !important;
+    --sidebar-foreground: 203 213 225 !important;
+    --sidebar-primary: 148 163 184 !important;
+    --sidebar-primary-foreground: 15 23 42 !important;
+    --sidebar-accent: 51 65 85 !important;
+    --sidebar-accent-foreground: 203 213 225 !important;
+    --sidebar-border: 51 65 85 !important;
+    --sidebar-ring: 148 163 184 !important;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  /* FORÇAR BODY BRANCO */
+  body {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(15, 23, 42) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* FORÇAR HTML BRANCO TAMBÉM */
+  html {
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%) !important;
+  }
+  
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(226, 232, 240, 0.5);
+  }
+
+  .dark .glass-effect {
+    background: rgba(30, 41, 59, 0.9) !important;
+    border: 1px solid rgba(51, 65, 85, 0.5);
+  }
+
+  .card-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+
+  .dark .card-shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+
+  .dark .hover-lift:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@layer utilities {
+  /* SOBRESCREVER QUALQUER COR AMARELA */
+  .bg-background {
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  .dark .bg-background {
+    background-color: rgb(15, 23, 42) !important;
+  }
+
+  /* FORÇAR SIDEBAR BRANCA */
+  [data-sidebar="sidebar"] {
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  .dark [data-sidebar="sidebar"] {
+    background-color: rgb(30, 41, 59) !important;
+  }
+
+  /* FORÇAR MAIN BRANCO */
+  main {
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  .dark main {
+    background-color: rgb(15, 23, 42) !important;
+  }
+
+  /* EMERGÊNCIA: REMOVER QUALQUER AMARELO */
+  * {
+    /* Se algo ainda estiver amarelo, force branco */
+  }
+
+  *[style*="yellow"],
+  *[style*="#ffff"],
+  *[style*="rgb(255, 255, 0"],
+  *[class*="yellow"] {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(15, 23, 42) !important;
+  }
+
+  /* Classes específicas que podem estar causando amarelo */
+  .bg-yellow-50,
+  .bg-yellow-100,
+  .bg-yellow-200,
+  .bg-yellow-300,
+  .bg-yellow-400,
+  .bg-yellow-500 {
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  /* Se houver alguma classe stone amarelada */
+  .bg-stone-50,
+  .bg-stone-100,
+  .bg-stone-200 {
+    background-color: rgb(248, 250, 252) !important;
+  }
+
+  /* Wrapper principal */
+  #root {
+    background-color: rgb(255, 255, 255) !important;
+  }
+
+  .dark #root {
+    background-color: rgb(15, 23, 42) !important;
+  }
+}

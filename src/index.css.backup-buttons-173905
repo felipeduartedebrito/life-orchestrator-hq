@@ -1,0 +1,521 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* === TEMA NEUTRO PROFISSIONAL === */
+    /* Fundo principal: BRANCO PURO */
+    --background: 255 255 255;
+    --foreground: 30 41 59;
+
+    /* Cards: Branco com bordas sutis */
+    --card: 255 255 255;
+    --card-foreground: 30 41 59;
+
+    /* Popover: Branco puro */
+    --popover: 255 255 255;
+    --popover-foreground: 30 41 59;
+
+    /* Primary: Azul corporativo */
+    --primary: 30 64 175;
+    --primary-foreground: 255 255 255;
+
+    /* Secondary: Cinza claro neutro */
+    --secondary: 248 250 252;
+    --secondary-foreground: 71 85 105;
+
+    /* Muted: Cinza muito claro */
+    --muted: 241 245 249;
+    --muted-foreground: 100 116 139;
+
+    /* Accent: Cinza médio */
+    --accent: 226 232 240;
+    --accent-foreground: 51 65 85;
+
+    /* Destructive: Vermelho limpo */
+    --destructive: 220 38 38;
+    --destructive-foreground: 255 255 255;
+
+    /* Bordas: Cinza claro */
+    --border: 203 213 225;
+    --input: 241 245 249;
+    --ring: 30 64 175;
+
+    /* Radius padrão */
+    --radius: 0.5rem;
+
+    /* === SIDEBAR === */
+    --sidebar-background: 255 255 255;
+    --sidebar-foreground: 51 65 85;
+    --sidebar-primary: 30 64 175;
+    --sidebar-primary-foreground: 255 255 255;
+    --sidebar-accent: 241 245 249;
+    --sidebar-accent-foreground: 71 85 105;
+    --sidebar-border: 203 213 225;
+    --sidebar-ring: 30 64 175;
+  }
+
+  .dark {
+    /* === DARK MODE ELEGANTE === */
+    /* Fundo: Azul escuro profissional */
+    --background: 15 23 42;
+    --foreground: 248 250 252;
+
+    /* Cards: Azul escuro */
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
+
+    /* Popover: Azul escuro */
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
+
+    /* Primary: Azul claro */
+    --primary: 59 130 246;
+    --primary-foreground: 15 23 42;
+
+    /* Secondary: Azul médio */
+    --secondary: 51 65 85;
+    --secondary-foreground: 226 232 240;
+
+    /* Muted: Azul acinzentado */
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
+
+    /* Accent: Azul médio */
+    --accent: 71 85 105;
+    --accent-foreground: 203 213 225;
+
+    /* Destructive: Vermelho */
+    --destructive: 239 68 68;
+    --destructive-foreground: 248 250 252;
+
+    /* Bordas: Azul escuro */
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 59 130 246;
+
+    /* === SIDEBAR DARK === */
+    --sidebar-background: 30 41 59;
+    --sidebar-foreground: 203 213 225;
+    --sidebar-primary: 59 130 246;
+    --sidebar-primary-foreground: 15 23 42;
+    --sidebar-accent: 51 65 85;
+    --sidebar-accent-foreground: 203 213 225;
+    --sidebar-border: 51 65 85;
+    --sidebar-ring: 59 130 246;
+  }
+}
+
+@layer base {
+  /* Reset global */
+  * {
+    border-color: hsl(var(--border));
+  }
+
+  /* HTML e Body */
+  html {
+    background-color: rgb(255, 255, 255);
+  }
+
+  body {
+    background-color: rgb(255, 255, 255);
+    color: rgb(30, 41, 59);
+    font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Dark mode body */
+  .dark body {
+    background-color: rgb(15, 23, 42);
+    color: rgb(248, 250, 252);
+  }
+
+  /* Headings */
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: rgb(30, 41, 59);
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+    color: rgb(248, 250, 252);
+  }
+
+  /* Links */
+  a {
+    color: rgb(30, 64, 175);
+    text-decoration: none;
+  }
+
+  .dark a {
+    color: rgb(59, 130, 246);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Root container */
+  #root {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+  }
+
+  .dark #root {
+    background-color: rgb(15, 23, 42);
+  }
+}
+
+@layer components {
+  /* === COMPONENTES PERSONALIZADOS === */
+
+  /* Card com sombra suave */
+  .card-modern {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(203, 213, 225);
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    transition: all 0.2s ease;
+  }
+
+  .dark .card-modern {
+    background-color: rgb(30, 41, 59);
+    border-color: rgb(51, 65, 85);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .card-modern:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transform: translateY(-1px);
+  }
+
+  .dark .card-modern:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Background gradiente sutil */
+  .gradient-bg {
+    background: linear-gradient(135deg, rgb(255, 255, 255) 0%, rgb(248, 250, 252) 100%);
+  }
+
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, rgb(15, 23, 42) 0%, rgb(30, 41, 59) 100%);
+  }
+
+  /* Glass effect */
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(203, 213, 225, 0.5);
+  }
+
+  .dark .glass-effect {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(51, 65, 85, 0.5);
+  }
+
+  /* Header */
+  .header-modern {
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgb(203, 213, 225);
+  }
+
+  .dark .header-modern {
+    background-color: rgba(30, 41, 59, 0.95);
+    border-bottom-color: rgb(51, 65, 85);
+  }
+
+  /* Main content */
+  .main-content {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+  }
+
+  .dark .main-content {
+    background-color: rgb(15, 23, 42);
+  }
+}
+
+@layer utilities {
+  /* Animações */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* 🎯 CSS FINAL - ELIMINAR TODOS OS AMARELOS
+   Adicione no final do src/index.css */
+
+/* SOBRESCREVER BADGES AMARELOS */
+.bg-yellow-100,
+.bg-yellow-200,
+.bg-yellow-300,
+.bg-yellow-400,
+.bg-yellow-500 {
+  background-color: rgb(239, 246, 255) !important; /* blue-50 */
+  color: rgb(29, 78, 216) !important; /* blue-700 */
+}
+
+.dark .bg-yellow-100,
+.dark .bg-yellow-200,
+.dark .bg-yellow-300,
+.dark .bg-yellow-400,
+.dark .bg-yellow-500 {
+  background-color: rgb(30, 58, 138) !important; /* blue-900 */
+  color: rgb(147, 197, 253) !important; /* blue-300 */
+}
+
+/* SOBRESCREVER PROGRESS BARS AMARELAS */
+.bg-yellow-400,
+.bg-yellow-500,
+.bg-amber-400,
+.bg-amber-500 {
+  background-color: rgb(37, 99, 235) !important; /* blue-600 */
+}
+
+/* SOBRESCREVER BOTÕES AMARELOS */
+.bg-yellow-400:hover,
+.bg-yellow-500:hover,
+.bg-amber-400:hover,
+.bg-amber-500:hover {
+  background-color: rgb(29, 78, 216) !important; /* blue-700 */
+}
+
+/* FORÇAR CORES NEUTRAS EM ELEMENTOS ESPECÍFICOS */
+[class*="yellow"],
+[class*="amber"] {
+  background-color: rgb(248, 250, 252) !important; /* slate-50 */
+  color: rgb(30, 41, 59) !important; /* slate-800 */
+}
+
+.dark [class*="yellow"],
+.dark [class*="amber"] {
+  background-color: rgb(30, 41, 59) !important; /* slate-800 */
+  color: rgb(226, 232, 240) !important; /* slate-200 */
+}
+
+/* BADGES ESPECÍFICOS - FORÇAR CORES NEUTRAS */
+.badge-yellow,
+.badge-amber {
+  background-color: rgb(239, 246, 255) !important; /* blue-50 */
+  color: rgb(29, 78, 216) !important; /* blue-700 */
+  border-color: rgb(191, 219, 254) !important; /* blue-200 */
+}
+
+.dark .badge-yellow,
+.dark .badge-amber {
+  background-color: rgb(30, 58, 138) !important; /* blue-900 */
+  color: rgb(147, 197, 253) !important; /* blue-300 */
+  border-color: rgb(30, 58, 138) !important; /* blue-900 */
+}
+
+/* PROGRESS BARS - CORES ALTERNATIVAS */
+.progress-yellow {
+  background-color: rgb(37, 99, 235) !important; /* blue-600 */
+}
+
+.progress-amber {
+  background-color: rgb(16, 185, 129) !important; /* emerald-500 */
+}
+
+.progress-warm {
+  background-color: rgb(147, 51, 234) !important; /* purple-600 */
+}
+
+/* BOTÕES - SUBSTITUIR AMARELOS POR CORES NEUTRAS */
+.btn-yellow {
+  background-color: rgb(37, 99, 235) !important; /* blue-600 */
+  color: white !important;
+}
+
+.btn-yellow:hover {
+  background-color: rgb(29, 78, 216) !important; /* blue-700 */
+}
+
+.btn-amber {
+  background-color: rgb(16, 185, 129) !important; /* emerald-500 */
+  color: white !important;
+}
+
+.btn-amber:hover {
+  background-color: rgb(5, 150, 105) !important; /* emerald-600 */
+}
+
+/* ELEMENTOS INLINE COM STYLE AMARELO */
+[style*="background-color: yellow"],
+[style*="background: yellow"],
+[style*="backgroundColor: yellow"],
+[style*="background-color: #ffff"],
+[style*="background: #ffff"] {
+  background-color: rgb(239, 246, 255) !important; /* blue-50 */
+  background: rgb(239, 246, 255) !important;
+}
+
+/* TEXTO AMARELO */
+.text-yellow-400,
+.text-yellow-500,
+.text-yellow-600,
+.text-amber-400,
+.text-amber-500,
+.text-amber-600 {
+  color: rgb(29, 78, 216) !important; /* blue-700 */
+}
+
+.dark .text-yellow-400,
+.dark .text-yellow-500,
+.dark .text-yellow-600,
+.dark .text-amber-400,
+.dark .text-amber-500,
+.dark .text-amber-600 {
+  color: rgb(147, 197, 253) !important; /* blue-300 */
+}
+
+/* BORDAS AMARELAS */
+.border-yellow-200,
+.border-yellow-300,
+.border-amber-200,
+.border-amber-300 {
+  border-color: rgb(191, 219, 254) !important; /* blue-200 */
+}
+
+.dark .border-yellow-200,
+.dark .border-yellow-300,
+.dark .border-amber-200,
+.dark .border-amber-300 {
+  border-color: rgb(30, 58, 138) !important; /* blue-900 */
+}
+
+/* GRADIENTES AMARELOS */
+.from-yellow-400,
+.from-amber-400 {
+  --tw-gradient-from: rgb(37, 99, 235) !important; /* blue-600 */
+}
+
+.to-yellow-500,
+.to-amber-500 {
+  --tw-gradient-to: rgb(29, 78, 216) !important; /* blue-700 */
+}
+
+/* EMERGENCY: SE AINDA HOUVER AMARELO */
+*[class*="yellow"]:not(.text-yellow):not(.border-yellow) {
+  background-color: rgb(248, 250, 252) !important;
+}
+
+*[class*="amber"]:not(.text-amber):not(.border-amber) {
+  background-color: rgb(248, 250, 252) !important;
+}
+
+/* 🎯 CSS PARA CORRIGIR CORES DOS BOTÕES
+   Adicione no final do src/index.css */
+
+/* SOBRESCREVER BOTÕES MARRONS/STONE */
+.bg-stone-500,
+.bg-stone-600,
+.bg-stone-700 {
+  background-color: rgb(37, 99, 235) !important; /* blue-600 */
+}
+
+.bg-stone-500:hover,
+.bg-stone-600:hover,
+.bg-stone-700:hover {
+  background-color: rgb(29, 78, 216) !important; /* blue-700 */
+}
+
+/* BOTÕES DE FILTRO - FORÇAR CORES NEUTRAS */
+.border-stone-300,
+.border-stone-400 {
+  border-color: rgb(203, 213, 225) !important; /* slate-300 */
+}
+
+.dark .border-stone-300,
+.dark .border-stone-400 {
+  border-color: rgb(71, 85, 105) !important; /* slate-600 */
+}
+
+.text-stone-600,
+.text-stone-700 {
+  color: rgb(71, 85, 105) !important; /* slate-600 */
+}
+
+.dark .text-stone-600,
+.dark .text-stone-700 {
+  color: rgb(203, 213, 225) !important; /* slate-300 */
+}
+
+/* HOVER DOS BOTÕES */
+.hover\:bg-stone-50:hover {
+  background-color: rgb(248, 250, 252) !important; /* slate-50 */
+}
+
+.dark .hover\:bg-stone-800:hover {
+  background-color: rgb(30, 41, 59) !important; /* slate-800 */
+}
+
+/* BOTÕES ESPECÍFICOS DA PÁGINA TASKS */
+button[class*="stone"] {
+  background-color: rgb(37, 99, 235) !important;
+  color: white !important;
+}
+
+button[class*="stone"]:hover {
+  background-color: rgb(29, 78, 216) !important;
+}
+
+/* VARIANTES OUTLINE */
+button[variant="outline"][class*="stone"] {
+  background-color: transparent !important;
+  border-color: rgb(203, 213, 225) !important;
+  color: rgb(71, 85, 105) !important;
+}
+
+.dark button[variant="outline"][class*="stone"] {
+  border-color: rgb(71, 85, 105) !important;
+  color: rgb(203, 213, 225) !important;
+}
+
+button[variant="outline"][class*="stone"]:hover {
+  background-color: rgb(248, 250, 252) !important;
+}
+
+.dark button[variant="outline"][class*="stone"]:hover {
+  background-color: rgb(30, 41, 59) !important;
+}
+
+/* EMERGÊNCIA: QUALQUER BOTÃO COM COR ESTRANHA */
+button[style*="background-color: rgb(120"],
+button[style*="background: rgb(120"] {
+  background-color: rgb(37, 99, 235) !important;
+  background: rgb(37, 99, 235) !important;
+}
+
